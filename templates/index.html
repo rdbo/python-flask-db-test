@@ -2,6 +2,20 @@
 <html>
     <head>
         <title>Test</title>
+        <style>
+            .data-block
+            {
+                background-color: #EEEEEE;
+                margin-bottom: 10px;
+                padding: 5px;
+                width: auto;
+            }
+
+            .data-info
+            {
+                margin: 0;
+            }
+        </style>
     </head>
 
     <body>
@@ -12,8 +26,11 @@
         </form>
         <br>
         {% for u in user_list %}
-        <p>Username: {{u.username}}</p>
-        <p>Password: {{u.password}}</p>
+        <div class="data-block">
+            <p class="data-info">UID: {{ u.uid }}</p>
+            <p class="data-info">Username: {{u.username}}</p>
+            <p class="data-info">Password: {{u.password}}</p>
+        </div>
         {% endfor %}
     </body>
 </html>
