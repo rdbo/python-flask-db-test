@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+    </head>
+
+    <body>
+        <form action="/" method="POST">
+            <input type="text" name="user" placeholder="Username">
+            <input type="password" name="pass" placeholder="Password">
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        {% for u in user_list %}
+        <p>Username: {{u.username}}</p>
+        <p>Password: {{u.password}}</p>
+        {% endfor %}
+    </body>
+</html>
